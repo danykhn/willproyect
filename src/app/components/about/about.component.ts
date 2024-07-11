@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -9,5 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export default class AboutComponent {
+  constructor(private viewportScroller: ViewportScroller) {}
 
+  ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }
