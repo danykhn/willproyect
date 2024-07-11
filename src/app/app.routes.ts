@@ -8,8 +8,12 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadComponent: () => import("./components/home/home.component")
+        loadComponent: () => import("./components/home/home.component"),    
     },
+    {
+        path:'about',             
+        loadComponent: () => import("./components/about/about.component")
+    }, 
     {
         path: 'ofertas',    
         loadComponent: () => import("./components/ofertas/ofertas.component"),
